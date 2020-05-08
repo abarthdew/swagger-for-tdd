@@ -36,7 +36,7 @@ compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
     .build()
 ```
 
-## *ApiOperation : 문서 타이틀에 대한 설명 추가
+## *Api : 문서 타이틀에 대한 설명 추가
 ### TODO 4
 ```java
 @Api(tags = {"01. Beverage List"}, description = "음료 목록 관리")
