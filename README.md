@@ -17,7 +17,7 @@ compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
 ## *SwaggerConfig.java
 ### TODO 2
 ```java
-@EnableSwagger2 //swagger-ui를 사용할 수 있게 해 주는 어노테이션
+@EnableSwagger2 //swagger를 사용할 수 있게 해 주는 어노테이션
 ---
 .title("Banapresso APIs") // 문서 제목
     .description("바나프레소 api 문서입니다") // 문서 설명
@@ -28,7 +28,7 @@ compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
 ### TODO 3
 ```java
 .apiInfo(apiInfo()) //ApiInfo 클래스의 apiInfo() 메서드 주입
-    .select()
+    .select() //스웨거에 의해 노출되는 끝단endpoint (url) 을 제어
     .apis(RequestHandlerSelectors.basePackage("my.project.swaggerstd"))
     //  .apis(RequestHandlerSelectors.any()) // 현재 RequestMapping으로 할당된 모든 URL 리스트를 추출
     .paths(PathSelectors.ant("/api/**")) // 그중 /api/** 인 URL들만 필터링
