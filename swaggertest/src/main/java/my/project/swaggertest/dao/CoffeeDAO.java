@@ -47,7 +47,7 @@ public class CoffeeDAO {
 //        dto.setId("0000");
 //        dto.setName("coffee");
 //        dto.setPrice(3000);
-        return template.update(sql, dto.getId(), dto.getName(), dto.getPrice());
+        return template.update(sql, dto.getName(), dto.getPrice());
     }
 
 }
