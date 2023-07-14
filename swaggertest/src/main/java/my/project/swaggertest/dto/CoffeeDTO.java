@@ -5,8 +5,8 @@ import lombok.Data;
 @Data
 public class CoffeeDTO {
 
-    private String id;
-    private String name;
-    private int price;
+  private String id;
+  private String name;
+  private int price;
 
 }

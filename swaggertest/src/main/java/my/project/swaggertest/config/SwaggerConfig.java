@@ -15,21 +15,21 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 // TODO 2
 public class SwaggerConfig {
 
-    //Docket 빈을 정의
-    @Bean
-    public Docket api() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .select()
-                // TODO 3
-                .build()
-                ;
-    }
+  //Docket 빈을 정의
+  @Bean
+  public Docket api() {
+    return new Docket(DocumentationType.SWAGGER_2)
+      .apiInfo(apiInfo())
+      .select()
+      // TODO 3
+      .build()
+      ;
+  }
 
-    private ApiInfo apiInfo() {
-        return new ApiInfoBuilder()
-                // TODO 2
-                .build();
-    }
+  private ApiInfo apiInfo() {
+    return new ApiInfoBuilder()
+      // TODO 2
+      .build();
+  }
 
 }

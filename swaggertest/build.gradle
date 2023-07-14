@@ -1,9 +1,9 @@
 plugins {
-    // TODO (1) : 버전 안 맞으면 에러나므로 확인
-    id 'org.springframework.boot' version '2.2.1.RELEASE'
-    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-    id 'java'
-    id 'war'
+  // TODO (1) : 버전 안 맞으면 에러나므로 확인
+  id 'org.springframework.boot' version '2.2.1.RELEASE'
+  id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+  id 'java'
+  id 'war'
 }
 
 group = 'spring.boot'
@@ -11,31 +11,31 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
-    }
+  compileOnly {
+    extendsFrom annotationProcessor
+  }
 }
 
 repositories {
-    mavenCentral()
-    maven { url "https://code.lds.org/nexus/content/groups/main-repo"}
+  mavenCentral()
+  maven { url "https://code.lds.org/nexus/content/groups/main-repo" }
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    compile 'com.oracle:ojdbc6:11.2.0.3'
-    compile('org.springframework.boot:spring-boot-starter-jdbc')
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  compile 'com.oracle:ojdbc6:11.2.0.3'
+  compile('org.springframework.boot:spring-boot-starter-jdbc')
 
-    // TODO 1
+  // TODO 1
 
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-    testImplementation('org.springframework.boot:spring-boot-starter-test') {
-        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-    }
+  compileOnly 'org.projectlombok:lombok'
+  annotationProcessor 'org.projectlombok:lombok'
+  providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+  testImplementation('org.springframework.boot:spring-boot-starter-test') {
+    exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+  }
 }
 
 test {
-    useJUnitPlatform()
+  useJUnitPlatform()
 }
